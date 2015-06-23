@@ -13,10 +13,18 @@ class playsoundViewController: UIViewController {
 
     @IBOutlet weak var snail: UIButton!
     
+    @IBOutlet weak var stop: UIButton!
+    
     @IBOutlet weak var rabbit: UIButton!
+    
+    @IBOutlet weak var chipmunk: UIButton!
+    
+    @IBOutlet weak var death: UIButton!
     
     var audioPlayer:AVAudioPlayer!
     var receivedaudio:RecordedAudio!
+    var audioEngine:AVAudioEngine!
+    var audioFile:AVAudioFile!
     
     
 
@@ -29,6 +37,9 @@ class playsoundViewController: UIViewController {
        // }
         audioPlayer = AVAudioPlayer(contentsOfURL: receivedaudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
+        audioEngine = AVAudioEngine()
+        
+        audioFile = AVAudioFile(forReading: receivedaudio.filePathUrl, error: nil)
         
         // Do any additional setup after loading the view.
     }
@@ -54,6 +65,39 @@ class playsoundViewController: UIViewController {
         audioPlayer.play()
     }
     
+    @IBAction func chipmunksounds(sender: UIButton) {
+        playAudioWithVariablePitch(1000)
+    }
+    
+    @IBAction func deathsounds(sender: UIButton) {
+        playAudioWithVariablePitch(-700)
+        
+    }
+    func playAudioWithVariablePitch(pitch: Float){
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        var audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        var changePitchEffect = AVAudioUnitTimePitch()
+        changePitchEffect.pitch = pitch
+        audioEngine.attachNode(changePitchEffect)
+        
+        audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
+        audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        audioEngine.startAndReturnError(nil)
+        
+        audioPlayerNode.play()
+    }
+    @IBAction func stopsounds(sender: UIButton) {
+        
+        audioPlayer.stop()
+        audioEngine.stop()
+    }
     /*
     // MARK: - Navigation
 
