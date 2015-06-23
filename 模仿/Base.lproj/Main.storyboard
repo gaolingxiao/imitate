@@ -32,9 +32,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.23855829049999999" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="264" y="466" width="73" height="21"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbL-41-fMW">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -61,17 +58,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.54596211679999995" green="0.79330232040000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="hKy-4K-qA1" secondAttribute="centerX" constant="-0.5" id="KBH-kB-Xrm"/>
+                            <constraint firstItem="HbL-41-fMW" firstAttribute="top" secondItem="bXl-fK-Gni" secondAttribute="bottom" constant="157" id="1ah-gt-V7A"/>
+                            <constraint firstAttribute="centerX" secondItem="hKy-4K-qA1" secondAttribute="centerX" constant="-0.5" id="3E2-nA-JgB"/>
+                            <constraint firstItem="hKy-4K-qA1" firstAttribute="top" secondItem="bXl-fK-Gni" secondAttribute="bottom" constant="16" id="97b-Le-PO9"/>
+                            <constraint firstAttribute="centerY" secondItem="hKy-4K-qA1" secondAttribute="centerY" constant="-76.5" id="E0a-3I-iqM"/>
                             <constraint firstAttribute="centerX" secondItem="bXl-fK-Gni" secondAttribute="centerX" id="Taw-0h-6ZJ"/>
-                            <constraint firstItem="hKy-4K-qA1" firstAttribute="top" secondItem="bXl-fK-Gni" secondAttribute="bottom" constant="16" id="WFE-8E-c69"/>
                             <constraint firstAttribute="centerY" secondItem="bXl-fK-Gni" secondAttribute="centerY" id="Wqx-HQ-PqJ"/>
-                            <constraint firstItem="HbL-41-fMW" firstAttribute="centerX" secondItem="hKy-4K-qA1" secondAttribute="centerX" id="Xo7-Wo-8ac"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HbL-41-fMW" secondAttribute="bottom" constant="143" id="d2h-ud-DI9"/>
+                            <constraint firstItem="HbL-41-fMW" firstAttribute="top" secondItem="hKy-4K-qA1" secondAttribute="bottom" constant="120" id="hL0-Gd-lN0"/>
                             <constraint firstAttribute="centerX" secondItem="bXl-fK-Gni" secondAttribute="centerX" id="hR7-Zy-glh"/>
                             <constraint firstAttribute="centerY" secondItem="bXl-fK-Gni" secondAttribute="centerY" id="hUx-Xp-566"/>
                             <constraint firstAttribute="centerX" secondItem="bXl-fK-Gni" secondAttribute="centerX" id="lLp-XC-MX4"/>
                             <constraint firstAttribute="centerX" secondItem="bXl-fK-Gni" secondAttribute="centerX" id="mvf-hM-1fj"/>
-                            <constraint firstAttribute="centerX" secondItem="hKy-4K-qA1" secondAttribute="centerX" constant="-0.5" id="srF-IQ-foA"/>
+                            <constraint firstAttribute="centerX" secondItem="HbL-41-fMW" secondAttribute="centerX" constant="-0.5" id="wBR-Q8-YWF"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -80,11 +78,12 @@
                                 <exclude reference="HbL-41-fMW"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="KBH-kB-Xrm"/>
-                                <exclude reference="WFE-8E-c69"/>
-                                <exclude reference="srF-IQ-foA"/>
-                                <exclude reference="d2h-ud-DI9"/>
-                                <exclude reference="Xo7-Wo-8ac"/>
+                                <exclude reference="3E2-nA-JgB"/>
+                                <exclude reference="97b-Le-PO9"/>
+                                <exclude reference="E0a-3I-iqM"/>
+                                <exclude reference="1ah-gt-V7A"/>
+                                <exclude reference="hL0-Gd-lN0"/>
+                                <exclude reference="wBR-Q8-YWF"/>
                                 <exclude reference="Taw-0h-6ZJ"/>
                                 <exclude reference="Wqx-HQ-PqJ"/>
                                 <exclude reference="hR7-Zy-glh"/>
@@ -100,11 +99,12 @@
                                 <include reference="HbL-41-fMW"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="KBH-kB-Xrm"/>
-                                <include reference="WFE-8E-c69"/>
-                                <include reference="srF-IQ-foA"/>
-                                <include reference="d2h-ud-DI9"/>
-                                <include reference="Xo7-Wo-8ac"/>
+                                <include reference="3E2-nA-JgB"/>
+                                <include reference="97b-Le-PO9"/>
+                                <include reference="E0a-3I-iqM"/>
+                                <include reference="1ah-gt-V7A"/>
+                                <include reference="hL0-Gd-lN0"/>
+                                <include reference="wBR-Q8-YWF"/>
                                 <include reference="Taw-0h-6ZJ"/>
                                 <include reference="Wqx-HQ-PqJ"/>
                                 <include reference="hR7-Zy-glh"/>
@@ -186,6 +186,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.54596211676032191" green="0.79330232037318438" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="3Zk-st-YCP" secondAttribute="centerY" constant="-262" id="5gK-Ag-msC"/>
                             <constraint firstItem="sYk-QD-7uP" firstAttribute="top" secondItem="3Zk-st-YCP" secondAttribute="bottom" constant="113" id="AdL-7V-0Ea"/>
                             <constraint firstItem="sYk-QD-7uP" firstAttribute="top" secondItem="eT7-e4-4bO" secondAttribute="bottom" constant="209" id="B4S-5x-4dq"/>
                             <constraint firstItem="3Hw-q1-JOC" firstAttribute="top" secondItem="UXN-In-6Qe" secondAttribute="bottom" constant="76" id="D1Q-6C-JeW"/>
@@ -206,16 +207,17 @@
                                 <exclude reference="IZI-Yr-wC8"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="D1Q-6C-JeW"/>
-                                <exclude reference="fOX-s8-4Pi"/>
-                                <exclude reference="aVj-LF-l4T"/>
-                                <exclude reference="xpm-Ln-2qU"/>
-                                <exclude reference="vAr-2h-aGU"/>
-                                <exclude reference="pNO-S2-zGV"/>
-                                <exclude reference="eOy-rf-LBI"/>
                                 <exclude reference="AdL-7V-0Ea"/>
                                 <exclude reference="B4S-5x-4dq"/>
                                 <exclude reference="l24-fV-oNN"/>
+                                <exclude reference="D1Q-6C-JeW"/>
+                                <exclude reference="fOX-s8-4Pi"/>
+                                <exclude reference="5gK-Ag-msC"/>
+                                <exclude reference="eOy-rf-LBI"/>
+                                <exclude reference="pNO-S2-zGV"/>
+                                <exclude reference="vAr-2h-aGU"/>
+                                <exclude reference="aVj-LF-l4T"/>
+                                <exclude reference="xpm-Ln-2qU"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -227,16 +229,17 @@
                                 <include reference="IZI-Yr-wC8"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="D1Q-6C-JeW"/>
-                                <include reference="fOX-s8-4Pi"/>
-                                <include reference="aVj-LF-l4T"/>
-                                <include reference="xpm-Ln-2qU"/>
-                                <include reference="vAr-2h-aGU"/>
-                                <include reference="pNO-S2-zGV"/>
-                                <include reference="eOy-rf-LBI"/>
                                 <include reference="AdL-7V-0Ea"/>
                                 <include reference="B4S-5x-4dq"/>
                                 <include reference="l24-fV-oNN"/>
+                                <include reference="D1Q-6C-JeW"/>
+                                <include reference="fOX-s8-4Pi"/>
+                                <include reference="5gK-Ag-msC"/>
+                                <include reference="eOy-rf-LBI"/>
+                                <include reference="pNO-S2-zGV"/>
+                                <include reference="vAr-2h-aGU"/>
+                                <include reference="aVj-LF-l4T"/>
+                                <include reference="xpm-Ln-2qU"/>
                             </mask>
                         </variation>
                     </view>
